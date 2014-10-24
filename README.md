@@ -15,11 +15,11 @@ If those conditions are not fulfilled, an error message is generated and the exe
 The output is a list of callable functions that enable the storage and access of the matrices stored in the cache.
 The following callable functions are provided in the list:
 
--get() retrieves a matrix stored in the cache, if any
+-get() retrieves a matrix stored in the cache
  
 -set(x) stores a matrix x in the cache
 
--getInverse() fetches the inverse matrix in the cache if any
+-getInverse() fetches the inverse matrix in the cache, if any
 
 -setInverse(y) stores the inverse matrix in the cache
  
