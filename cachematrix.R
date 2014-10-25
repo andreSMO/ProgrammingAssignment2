@@ -15,10 +15,11 @@ makeCacheMatrix <- function(x = matrix()){
   checkIn <- function(mat){
     res <- TRUE
     if (class(mat) != "matrix") {
-      message("No new object created. Input must be a MATRIX")
+      message("Error, no new object created. Input must be a MATRIX")
       res<- FALSE
-    }else if (dim(mat)[1] != dim(mat)[2]){
-      message("No new object created. Input must be a SQUARE MATRIX")
+    }
+    else if (dim(mat)[1] != dim(mat)[2]){
+      message("Error, no new object created. Input must be a SQUARE MATRIX")
       res <- FALSE
     }
     res

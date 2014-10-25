@@ -1,7 +1,7 @@
 ##Purpose
 The purpose of this R software is to provide an efficient way to cache a matrix and its inverse.
 ##Basic software Structure
-The software contains two main functions:
+The software contains two top level functions:
  
 -makeCacheMatrix
 
@@ -11,7 +11,8 @@ The software contains two main functions:
 The function makeCacheMatrix creates a cache to store a square matrix and its inverse. 
 The input parameter is a square matrix. The default input is a 1X1 empty  matrix.
 The function controls if the input parameter is a matrix and if it is a square matrix. 
-If those conditions are not fulfilled, an error message is generated and the execution is terminated.  
+If those conditions are not fulfilled, an error message is generated and the execution is terminated. 
+If the parameter is accepted, the execution continues.   
 The output is a list of callable functions that enable the storage and access of the matrices stored in the cache.
 The following callable functions are provided in the list:
 
@@ -25,7 +26,7 @@ The following callable functions are provided in the list:
  
 ###Function cacheSolve
 The function cacheSolve computes the inverse of the matrix stored in the cache. 
-The input parameter is a cache object returned by the makeCacheMatrix (list of callable functions).
+The required input parameter is a cache object returned by the makeCacheMatrix (list of callable functions).
 First, the function tries to fetch the inverse matrix stored in the cache. 
 If there is an inverse matrix, it is returned and the execution is completed.
 If there is no cached inverse matrix, the function gets the regular matrix in the cache
